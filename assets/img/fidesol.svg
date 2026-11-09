@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img"><rect width="160" height="160" fill="#f1ecfd"/>
+<g stroke="#5b21b6" stroke-width="2" opacity=".55">
+<path d="M34 46L80 34M34 46L80 80M34 46L80 126M34 80L80 34M34 80L80 80M34 80L80 126M34 114L80 34M34 114L80 80M34 114L80 126M80 34L128 60M80 34L128 100M80 80L128 60M80 80L128 100M80 126L128 60M80 126L128 100"/></g>
+<g fill="#5b21b6"><circle cx="34" cy="46" r="9"/><circle cx="34" cy="80" r="9"/><circle cx="34" cy="114" r="9"/></g>
+<g fill="#8b5cf6"><circle cx="80" cy="34" r="9"/><circle cx="80" cy="80" r="9"/><circle cx="80" cy="126" r="9"/></g>
+<g fill="#fff" stroke="#5b21b6" stroke-width="3"><circle cx="128" cy="60" r="9"/><circle cx="128" cy="100" r="9"/></g></svg>
