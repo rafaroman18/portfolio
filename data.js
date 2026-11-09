@@ -59,6 +59,25 @@ window.PORTFOLIO = {
       link: "https://github.com/rafaroman18/BreastCancerDL"
     },
     {
+      image: "assets/img/estres.svg",
+      title: {
+        es: "Detección de estrés térmico con pulsera inteligente en entornos laborales extremos (FIDESOL)",
+        en: "Heat stress detection with a smart wristband for extreme work environments (FIDESOL)"
+      },
+      description: [
+        {
+          es: "Prototipo desarrollado en FIDESOL de un sistema que detecta cuándo un trabajador sufre un golpe de calor. Entrené un modelo de Machine Learning basado en árboles de decisión para identificar el estrés térmico a partir de los datos de una pulsera inteligente.",
+          en: "Prototype developed at FIDESOL of a system that detects when a worker is suffering heatstroke. I trained a Machine Learning model based on decision trees to identify heat stress from the data of a smart wristband."
+        },
+        {
+          es: "Al detectarlo, se envía una alerta a una centralita que registra todas las incidencias, y la pulsera avisa de forma sonora y visual de que el trabajador debe descansar y avisar a su supervisor para que revise su estado.",
+          en: "When it is detected, an alert is sent to a control center that logs every incident, and the wristband signals with sound and light that the worker must rest and notify their supervisor so that their condition can be checked."
+        }
+      ],
+      tags: ["Machine Learning", { es: "Árboles de decisión", en: "Decision trees" }, "Wearables", { es: "Alertas en tiempo real", en: "Real-time alerts" }],
+      note: "FIDESOL · 2025"
+    },
+    {
       image: "assets/img/fuego.svg",
       title: {
         es: "Predicción de incendios con Deep Learning y visualización en realidad virtual",
