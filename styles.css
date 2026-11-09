@@ -15,13 +15,16 @@ body {
 .index-inner { max-width: 1120px; margin: 0 auto; padding: 0 28px; display: flex; gap: 28px; overflow-x: auto; white-space: nowrap; }
 .index a { display: block; padding: 12px 0 10px; font-size: .88rem; font-weight: 600; color: var(--text); border-bottom: 2px solid transparent; }
 .index a, .btn { text-decoration: none; }
+.lang-toggle { display: inline-flex; align-items: center; gap: 8px; margin: 6px 0 6px auto; padding: 3px 12px; font: inherit; font-size: .8rem; font-weight: 700; color: var(--strong); background: var(--bg); border: 1px solid var(--line); border-radius: 10px; cursor: pointer; }
+.lang-toggle img { display: block; width: 20px; height: 14px; border-radius: 2px; box-shadow: 0 0 0 1px rgba(0,0,0,.15); object-fit: cover; }
+.lang-toggle:hover { border-color: var(--accent); }
 .index a:hover { color: var(--strong); border-bottom-color: var(--accent); }
 a { color: var(--link); text-decoration: underline; text-decoration-color: #a1a1aa; text-underline-offset: 3px; }
 a:hover { text-decoration-color: var(--strong); }
 
 .layout { max-width: 1120px; margin: 0 auto; padding: 32px 28px 56px; display: grid; grid-template-columns: 300px 1fr; gap: 56px; align-items: start; }
 
-/* Perfil */
+/* Profile */
 .profile { position: sticky; top: 72px; }
 .profile h1 { color: var(--strong); font-size: 2rem; line-height: 1.15; margin: 0 0 4px; }
 .role { margin: 0 0 20px; font-weight: 600; color: var(--accent); }
@@ -37,7 +40,7 @@ a:hover { text-decoration-color: var(--strong); }
 .contact li:last-child { border-bottom: 1px solid var(--line); }
 .contact .plain { color: var(--text); }
 
-/* Contenido */
+/* Content */
 main h2 { color: var(--strong); font-size: 1.45rem; line-height: 1.3; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 1px solid var(--line); position: relative; }
 main h2::after { content: ""; position: absolute; left: 0; bottom: -1px; width: 72px; height: 3px; border-radius: 2px; background: var(--accent); }
 main h2:first-child { margin-top: 0; }
@@ -76,6 +79,16 @@ p { margin: 0 0 10px; }
 .skills h4 { margin: 0 0 8px; color: var(--strong); font-size: .95rem; }
 .foot { margin: 48px 0 0; padding-top: 18px; border-top: 1px solid var(--line); font-size: .85rem; }
 
+@media (min-width: 861px) {
+  .profile { max-height: calc(100vh - 88px); overflow-y: auto; scrollbar-width: none; }
+  .profile::-webkit-scrollbar { display: none; }
+  .profile h1 { font-size: 1.8rem; }
+  .role { margin-bottom: 14px; }
+  .photo-wrap { width: clamp(110px, calc(100vh - 600px), 300px); margin-bottom: 14px; }
+  .profile p { margin-bottom: 10px; font-size: .9rem; line-height: 1.5; }
+  .contact { margin: 12px 0 0; font-size: .88rem; }
+  .contact li { padding: 5px 0; }
+}
 @media (max-width: 860px) {
   .layout { grid-template-columns: 1fr; gap: 32px; padding-top: 32px; }
   .profile { position: static; display: grid; grid-template-columns: 180px 1fr; column-gap: 24px; }
