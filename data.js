@@ -40,6 +40,25 @@ window.PORTFOLIO = {
       tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Python", "Django REST", "Docker"]
     },
     {
+      image: "assets/img/tfm.svg",
+      title: {
+        es: "TFM: aumento de datos con GANs para la detección de cáncer de mama en imágenes térmicas",
+        en: "Master's thesis: data augmentation with GANs for breast cancer detection in thermal images"
+      },
+      description: [
+        {
+          es: "Trabajo Fin de Máster (UNED, 2025) que estudia si una StyleGAN entrenada con solo 260 imágenes térmicas puede generar muestras útiles para mejorar un clasificador de cáncer de mama. El diseño experimental, pensado para evitar sesgos, incluyó 400 StyleGAN entrenadas, 5 configuraciones de aumento y validación cruzada 5-fold repetida 10 veces, con unos 16 días de cómputo en GPU.",
+          en: "Master's thesis (UNED, 2025) studying whether a StyleGAN trained on just 260 thermal images can generate samples good enough to improve a breast cancer classifier. The experimental design, built to avoid bias, included 400 trained StyleGANs, 5 augmentation settings and 5-fold cross-validation repeated 10 times, with about 16 days of GPU compute."
+        },
+        {
+          es: "Añadir en torno a un 50 % de imágenes sintéticas dio el mejor equilibrio (más recall y menos falsos negativos), aunque las mejoras son pequeñas y no bastan para afirmar que el método mejore la detección.",
+          en: "Adding around 50 % synthetic images gave the best trade-off (higher recall and fewer false negatives), although the improvements are small and not enough to claim the method improves detection."
+        }
+      ],
+      tags: ["StyleGAN", "PyTorch", "Deep Learning", { es: "Imagen médica", en: "Medical imaging" }, "Grad-CAM"],
+      link: "https://github.com/rafaroman18/BreastCancerDL"
+    },
+    {
       image: "assets/img/fuego.svg",
       title: {
         es: "Predicción de incendios con Deep Learning y visualización en realidad virtual",
