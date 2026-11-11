@@ -84,7 +84,7 @@ p { margin: 0 0 10px; }
   .profile::-webkit-scrollbar { display: none; }
   .profile h1 { font-size: 1.8rem; }
   .role { margin-bottom: 14px; }
-  .photo-wrap { width: clamp(110px, calc(100vh - 600px), 300px); margin-bottom: 14px; }
+  .photo-wrap { width: clamp(110px, calc(100vh - 640px), 300px); margin-bottom: 14px; }
   .profile p { margin-bottom: 10px; font-size: .9rem; line-height: 1.5; }
   .contact { margin: 12px 0 0; font-size: .88rem; }
   .contact li { padding: 5px 0; }

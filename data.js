@@ -37,7 +37,7 @@ window.PORTFOLIO = {
           en: "The goal is for students to practise patient interaction and clinical reasoning in a safe, repeatable environment, with different conditions and cases."
         }
       ],
-      tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Python", "Django REST", "Docker"]
+      tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Python", "Django REST", "Docker", "Azure Machine Learning"]
     },
     {
       image: "assets/img/tfm.svg",
@@ -49,10 +49,6 @@ window.PORTFOLIO = {
         {
           es: "Trabajo Fin de Máster (UNED, 2025) que estudia si una StyleGAN entrenada con solo 260 imágenes térmicas puede generar muestras útiles para mejorar un clasificador de cáncer de mama. El diseño experimental, pensado para evitar sesgos, incluyó 400 StyleGAN entrenadas, 5 configuraciones de aumento y validación cruzada 5-fold repetida 10 veces, con unos 16 días de cómputo en GPU.",
           en: "Master's thesis (UNED, 2025) studying whether a StyleGAN trained on just 260 thermal images can generate samples good enough to improve a breast cancer classifier. The experimental design, built to avoid bias, included 400 trained StyleGANs, 5 augmentation settings and 5-fold cross-validation repeated 10 times, with about 16 days of GPU compute."
-        },
-        {
-          es: "Añadir en torno a un 50 % de imágenes sintéticas dio el mejor equilibrio (más recall y menos falsos negativos), aunque las mejoras son pequeñas y no bastan para afirmar que el método mejore la detección.",
-          en: "Adding around 50 % synthetic images gave the best trade-off (higher recall and fewer false negatives), although the improvements are small and not enough to claim the method improves detection."
         }
       ],
       tags: ["StyleGAN", "PyTorch", "Deep Learning", { es: "Imagen médica", en: "Medical imaging" }, "Grad-CAM"],
@@ -78,6 +74,25 @@ window.PORTFOLIO = {
       note: "FIDESOL · 2025"
     },
     {
+      image: "assets/img/autobus.svg",
+      title: {
+        es: "Predicción de afluencia de viajeros para una empresa de autobuses (FIDESOL)",
+        en: "Passenger demand forecasting for a bus company (FIDESOL)"
+      },
+      description: [
+        {
+          es: "Proyecto en FIDESOL cuyo objetivo era construir un modelo predictivo de la afluencia de personas según el día, para que una empresa de autobuses supiera de antemano qué días debía poner autobuses de refuerzo. Se desarrollaron dos modelos, una red LSTM y una regresión, siendo la LSTM la que arrojó claramente mejores resultados.",
+          en: "FIDESOL project aimed at building a predictive model of passenger volume by day, so that a bus company would know in advance which days it needed to run extra buses. Two models were developed, an LSTM network and a regression, with the LSTM clearly delivering the better results."
+        },
+        {
+          es: "Además se montó un sistema que almacena en una base de datos la información de los autobuses y las predicciones, y que permite al cliente reentrenar los modelos para afinar su conocimiento. Mis tareas fueron el estudio y la limpieza de los datos y el diseño de los modelos.",
+          en: "A system was also set up to store the bus data and the predictions in a database, letting the client retrain the models to refine them. My tasks were the study and cleaning of the data and the design of the models."
+        }
+      ],
+      tags: ["LSTM", { es: "Regresión", en: "Regression" }, { es: "Series temporales", en: "Time series" }, "Python", { es: "Base de datos", en: "Database" }],
+      note: "FIDESOL"
+    },
+    {
       image: "assets/img/fuego.svg",
       title: {
         es: "Predicción de incendios con Deep Learning y visualización en realidad virtual",
@@ -87,6 +102,10 @@ window.PORTFOLIO = {
         {
           es: "Construcción de un modelo de Deep Learning con PyTorch capaz de predecir incendios y asignar un índice de riesgo a cada zona, que después puede visualizarse mediante un casco de realidad virtual. Para ello preparé y traté los datos con Python, Pandas y NumPy, trabajando con datos geográficos e históricos en formatos como .shp y .geoJSON.",
           en: "Built a Deep Learning model with PyTorch able to predict fires and assign a risk index to each zone, which can then be visualized with a virtual reality headset. The data was prepared and processed with Python, Pandas and NumPy, working with geographic and historical data in formats such as .shp and .geoJSON."
+        },
+        {
+          es: "Con la perspectiva actual, un modelo espaciotemporal como ConvLSTM, que combina la información geográfica de cada zona con su evolución en el tiempo, habría sido más apropiado, con un modelo de gradient boosting (XGBoost) como línea base.",
+          en: "In hindsight, a spatiotemporal model such as ConvLSTM, which combines the geographic information of each zone with its evolution over time, would have been more appropriate, with a gradient boosting model (XGBoost) as a baseline."
         }
       ],
       tags: ["PyTorch", "Pandas", "NumPy", { es: "Datos geoespaciales", en: "Geospatial data" }],
@@ -100,27 +119,13 @@ window.PORTFOLIO = {
       },
       description: [
         {
-          es: "Con un conjunto de datos de Airbnb de la Comunidad de Madrid, clasifiqué el tipo de habitación de cada apartamento y predije su precio mediante regresión. El proyecto recorre todo el análisis y procesado de datos y compara el desempeño de distintos modelos: Naive Bayes, KNN, árboles de decisión y Support Vector Machines.",
-          en: "Using an Airbnb dataset from the Community of Madrid, I classified the room type of each apartment and predicted its price through regression. The project covers the whole data analysis and processing workflow and compares the performance of several models: Naive Bayes, KNN, decision trees and Support Vector Machines."
+          es: "Proyecto personal para estudiar el mercado de la vivienda. Con un conjunto de datos de Airbnb de la Comunidad de Madrid, clasifiqué el tipo de habitación de cada apartamento y predije su precio mediante regresión. El proyecto recorre todo el análisis y procesado de datos y compara el desempeño de distintos modelos: Naive Bayes, KNN, árboles de decisión y Support Vector Machines.",
+          en: "Personal project to study the housing market. Using an Airbnb dataset from the Community of Madrid, I classified the room type of each apartment and predicted its price through regression. The project covers the whole data analysis and processing workflow and compares the performance of several models: Naive Bayes, KNN, decision trees and Support Vector Machines."
         }
       ],
-      tags: ["Scikit-Learn", "Pandas", "Matplotlib", "SVM", "KNN"],
+      tags: ["Scikit-Learn", "Pandas", "Matplotlib", "SVM", "KNN", "Python"],
       link: "https://github.com/rafaroman18/AIRBNB_ML"
     },
-    {
-      image: "assets/img/fidesol.svg",
-      title: {
-        es: "Investigación y despliegue de modelos de IA (FIDESOL)",
-        en: "AI model research and deployment (FIDESOL)"
-      },
-      description: [
-        {
-          es: "Desarrollo de investigaciones en inteligencia artificial y diseño de modelos, incluyendo su evaluación y validación. Definición de arquitecturas de soluciones de IA y despliegue de modelos en backend con Python y Django REST Framework.",
-          en: "AI research and model design, including evaluation and validation. Definition of AI solution architectures and model deployment in backend with Python and Django REST Framework."
-        }
-      ],
-      tags: ["TensorFlow", "PyTorch", "Django", "Docker", "LLMs"]
-    }
   ],
 
   // Secondary projects
@@ -213,6 +218,14 @@ window.PORTFOLIO = {
         en: "University of Cádiz (2016 – 2021), average grade 7.1"
       }
     },
+    {
+      title: { es: "ChatGPT e Inteligencia Artificial", en: "ChatGPT and Artificial Intelligence" },
+      detail: { es: "Fundae (sept. 2026) · LangChain y desarrollo de IA generativa", en: "Fundae (Sep. 2026) · LangChain and generative AI development" }
+    },
+    {
+      title: "Complete A.I. & Machine Learning, Data Science Bootcamp",
+      detail: { es: "Udemy (mar. 2026) · Ciencia de datos y Python", en: "Udemy (Mar. 2026) · Data science and Python" }
+    },
     { title: "UiPath RPA Associate", detail: "2021" },
     { title: "B2 First (FCE)", detail: "Cambridge" }
   ],
@@ -221,7 +234,7 @@ window.PORTFOLIO = {
   skills: [
     {
       title: { es: "IA y ML", en: "AI and ML" },
-      tags: ["Deep Learning", "Machine Learning", "LLMs", "GANs", "PyTorch", "TensorFlow", "Keras", "Scikit-Learn"]
+      tags: ["Deep Learning", "Machine Learning", "LLMs", "LangChain", "GANs", "PyTorch", "TensorFlow", "Keras", "Scikit-Learn"]
     },
     {
       title: { es: "Datos", en: "Data" },

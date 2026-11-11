@@ -99,6 +99,9 @@
   document.querySelectorAll('[data-en-label]').forEach(function (node) {
     node.dataset.esLabel = node.getAttribute('aria-label');
   });
+  document.querySelectorAll('[data-en-href]').forEach(function (node) {
+    node.dataset.esHref = node.getAttribute('href');
+  });
 
   function apply(next) {
     lang = next;
@@ -115,6 +118,11 @@
     });
     document.querySelectorAll('[data-en-label]').forEach(function (node) {
       node.setAttribute('aria-label', en ? node.dataset.enLabel : node.dataset.esLabel);
+    });
+
+    // Language-specific links, such as the CV download
+    document.querySelectorAll('[data-en-href]').forEach(function (node) {
+      node.setAttribute('href', en ? node.dataset.enHref : node.dataset.esHref);
     });
 
     renderContent();
