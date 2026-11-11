@@ -33,11 +33,15 @@ window.PORTFOLIO = {
           en: "In recent months I have worked on virtual assistants based on generative AI that run simulated medical sessions for UNIR. The student faces a virtual patient with a specific condition, conducts the consultation, asks the right questions and must reach a diagnosis."
         },
         {
+          es: "Los pacientes se representan con avatares 3D desarrollados en Unity y hablan con voz realista generada a través de ElevenLabs, lo que hace la consulta mucho más inmersiva.",
+          en: "The patients are represented by 3D avatars built in Unity and speak with realistic voices generated through ElevenLabs, making the consultation far more immersive."
+        },
+        {
           es: "El objetivo es que los estudiantes practiquen el trato con pacientes y el razonamiento clínico en un entorno seguro y repetible, con distintas patologías y casos.",
           en: "The goal is for students to practise patient interaction and clinical reasoning in a safe, repeatable environment, with different conditions and cases."
         }
       ],
-      tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Python", "Django REST", "Docker", "Azure Machine Learning"]
+      tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Unity", { es: "Avatares 3D", en: "3D avatars" }, "ElevenLabs", "Python", "Django REST", "Docker", "Azure Machine Learning"]
     },
     {
       image: "assets/img/tfm.svg",
