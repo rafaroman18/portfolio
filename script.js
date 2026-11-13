@@ -81,6 +81,29 @@
       return li;
     });
 
+    fill('publications', DATA.publications, function (item) {
+      var li = el('li');
+      li.appendChild(el('h3', '', t(item.title)));
+      var authors = el('p', 'pub-authors');
+      item.authors.forEach(function (name, i) {
+        if (i > 0) authors.appendChild(document.createTextNode(', '));
+        authors.appendChild(name === DATA.authorName ? el('strong', '', name) : document.createTextNode(name));
+      });
+      li.appendChild(authors);
+      li.appendChild(el('p', 'pub-venue', t(item.venue)));
+      if (item.description) li.appendChild(el('p', '', t(item.description)));
+      if (item.link) {
+        var p = el('p');
+        var a = el('a', 'btn', t(item.linkLabel));
+        a.href = item.link;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        p.appendChild(a);
+        li.appendChild(p);
+      }
+      return li;
+    });
+
     fill('skills-list', DATA.skills, function (item) {
       var div = el('div');
       div.appendChild(el('h4', '', t(item.title)));

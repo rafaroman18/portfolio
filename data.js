@@ -11,6 +11,8 @@
 //   { title, detail }
 // Skill group entry:
 //   { title, tags }
+// Publication entry:
+//   { title, authors: [names], venue, description?, link?, linkLabel? }
 
 window.PORTFOLIO = {
 
@@ -29,19 +31,12 @@ window.PORTFOLIO = {
       },
       description: [
         {
-          es: "En los últimos meses he trabajado en asistentes virtuales basados en IA generativa que sirven para realizar sesiones médicas simuladas para la UNIR. El alumno se enfrenta a un paciente virtual con una patología concreta, conduce la consulta, hace las preguntas oportunas y debe llegar a un diagnóstico.",
-          en: "In recent months I have worked on virtual assistants based on generative AI that run simulated medical sessions for UNIR. The student faces a virtual patient with a specific condition, conducts the consultation, asks the right questions and must reach a diagnosis."
-        },
-        {
-          es: "Los pacientes se representan con avatares 3D desarrollados en Unity y hablan con voz realista generada a través de ElevenLabs, lo que hace la consulta mucho más inmersiva.",
-          en: "The patients are represented by 3D avatars built in Unity and speak with realistic voices generated through ElevenLabs, making the consultation far more immersive."
-        },
-        {
-          es: "El objetivo es que los estudiantes practiquen el trato con pacientes y el razonamiento clínico en un entorno seguro y repetible, con distintas patologías y casos.",
-          en: "The goal is for students to practise patient interaction and clinical reasoning in a safe, repeatable environment, with different conditions and cases."
+          es: "Asistentes virtuales con IA generativa para sesiones médicas simuladas de la UNIR: el alumno conduce la consulta con un paciente virtual con una patología concreta y debe llegar a un diagnóstico. Los pacientes son avatares 3D en Unity con voz realista de ElevenLabs, para practicar el trato con pacientes y el razonamiento clínico en un entorno seguro y repetible.",
+          en: "Generative AI virtual assistants for simulated medical sessions at UNIR: the student conducts the consultation with a virtual patient with a specific condition and must reach a diagnosis. The patients are 3D avatars built in Unity with realistic ElevenLabs voices, to practise patient interaction and clinical reasoning in a safe, repeatable environment."
         }
       ],
-      tags: ["LLMs", { es: "IA generativa", en: "Generative AI" }, "Unity", { es: "Avatares 3D", en: "3D avatars" }, "ElevenLabs", "Python", "Django REST", "Docker", "Azure Machine Learning"]
+      tags: [{ es: "IA generativa", en: "Generative AI" }, { es: "Avatares 3D", en: "3D avatars" }, "ElevenLabs", "Python", "Azure DevOps"],
+      note: "FIDESOL · 2026"
     },
     {
       image: "assets/img/tfm.svg",
@@ -55,7 +50,7 @@ window.PORTFOLIO = {
           en: "Master's thesis (UNED, 2025) studying whether a StyleGAN trained on just 260 thermal images can generate samples good enough to improve a breast cancer classifier. The experimental design, built to avoid bias, included 400 trained StyleGANs, 5 augmentation settings and 5-fold cross-validation repeated 10 times, with about 16 days of GPU compute."
         }
       ],
-      tags: ["StyleGAN", "PyTorch", "Deep Learning", { es: "Imagen médica", en: "Medical imaging" }, "Grad-CAM"],
+      tags: ["StyleGAN", "PyTorch", "Python", "Deep Learning", { es: "Aumento de datos", en: "Data augmentation" }, "Grad-CAM"],
       link: "https://github.com/rafaroman18/BreastCancerDL"
     },
     {
@@ -72,9 +67,13 @@ window.PORTFOLIO = {
         {
           es: "Al detectarlo, se envía una alerta a una centralita que registra todas las incidencias, y la pulsera avisa de forma sonora y visual de que el trabajador debe descansar y avisar a su supervisor para que revise su estado.",
           en: "When it is detected, an alert is sent to a control center that logs every incident, and the wristband signals with sound and light that the worker must rest and notify their supervisor so that their condition can be checked."
+        },
+        {
+          es: "Dentro del mismo prototipo se desarrolló además un modelo text-to-SQL para que los trabajadores de la empresa consulten información de forma fluida y sencilla sin necesidad de conocer SQL.",
+          en: "The same prototype also included a text-to-SQL model so the company's workers can query information smoothly and easily without knowing SQL."
         }
       ],
-      tags: ["Machine Learning", { es: "Árboles de decisión", en: "Decision trees" }, "Wearables", { es: "Alertas en tiempo real", en: "Real-time alerts" }],
+      tags: [{ es: "Árboles de decisión", en: "Decision trees" }, "Python", "Wearables", "Text-to-SQL", "LLMs"],
       note: "FIDESOL · 2025"
     },
     {
@@ -93,26 +92,45 @@ window.PORTFOLIO = {
           en: "A system was also set up to store the bus data and the predictions in a database, letting the client retrain the models to refine them. My tasks were the study and cleaning of the data and the design of the models."
         }
       ],
-      tags: ["LSTM", { es: "Regresión", en: "Regression" }, { es: "Series temporales", en: "Time series" }, "Python", { es: "Base de datos", en: "Database" }],
-      note: "FIDESOL"
+      tags: ["LSTM", { es: "Regresión", en: "Regression" }, { es: "Series temporales", en: "Time series" }, "Python", { es: "Limpieza de datos", en: "Data cleaning" }],
+      note: "FIDESOL · 2025"
     },
     {
-      image: "assets/img/fuego.svg",
+      image: "assets/img/smartcrops.svg",
       title: {
-        es: "Predicción de incendios con Deep Learning y visualización en realidad virtual",
-        en: "Fire prediction with Deep Learning and virtual reality visualization"
+        es: "SmartCrops: portal de agricultura inteligente con gemelo digital y detección de plagas (FIDESOL)",
+        en: "SmartCrops: smart farming portal with a digital twin and pest detection (FIDESOL)"
       },
       description: [
         {
-          es: "Construcción de un modelo de Deep Learning con PyTorch capaz de predecir incendios y asignar un índice de riesgo a cada zona, que después puede visualizarse mediante un casco de realidad virtual. Para ello preparé y traté los datos con Python, Pandas y NumPy, trabajando con datos geográficos e históricos en formatos como .shp y .geoJSON.",
-          en: "Built a Deep Learning model with PyTorch able to predict fires and assign a risk index to each zone, which can then be visualized with a virtual reality headset. The data was prepared and processed with Python, Pandas and NumPy, working with geographic and historical data in formats such as .shp and .geoJSON."
+          es: "Portal en el que los usuarios consultan información sobre su parcela. A partir de imágenes de satélite y datos meteorológicos, de suelo y de agua, genera alertas ante posibles situaciones, predice la producción de oliva y las zonas más fértiles, e incorpora un gemelo digital de la parcela.",
+          en: "Portal where users consult information about their plot of land. Using satellite imagery and weather, soil and water data, it generates alerts for potential situations, predicts olive production and the most fertile zones, and includes a digital twin of the plot."
         },
         {
-          es: "Con la perspectiva actual, un modelo espaciotemporal como ConvLSTM, que combina la información geográfica de cada zona con su evolución en el tiempo, habría sido más apropiado, con un modelo de gradient boosting (XGBoost) como línea base.",
-          en: "In hindsight, a spatiotemporal model such as ConvLSTM, which combines the geographic information of each zone with its evolution over time, would have been more appropriate, with a gradient boosting model (XGBoost) as a baseline."
+          es: "Un apartado de plagas utiliza un modelo YOLO de visión por computador para revisar el nivel de insectos y parásitos en los cultivos y alertar cuando se supera un umbral crítico. Mi trabajo se centró en la investigación de datos satelitales (sobre todo infrarrojos) junto con índices de suelo y erosión, y en el entrenamiento y test del modelo YOLO.",
+          en: "A pest section uses a YOLO computer vision model to check the level of insects and parasites in the crops and alert when a critical threshold is exceeded. My work focused on researching satellite data (mainly infrared) together with soil and erosion indices, and on training and testing the YOLO model."
         }
       ],
-      tags: ["PyTorch", "Pandas", "NumPy", { es: "Datos geoespaciales", en: "Geospatial data" }],
+      tags: ["YOLO", "Python", { es: "Visión artificial", en: "Computer vision" }, { es: "Datos satelitales", en: "Satellite imagery" }, { es: "Gemelo digital", en: "Digital twin" }],
+      note: "FIDESOL · 2024"
+    }
+  ],
+
+  // Secondary projects
+  otherProjects: [
+    {
+      image: "assets/img/fuego.svg",
+      title: {
+        es: "Predicción de incendios con Deep Learning y realidad virtual",
+        en: "Fire prediction with Deep Learning and virtual reality"
+      },
+      description: [
+        {
+          es: "Modelo de Deep Learning con PyTorch que predice incendios y asigna un índice de riesgo a cada zona, visualizable en un casco de realidad virtual. Se contemplaba un modelo espaciotemporal como ConvLSTM.",
+          en: "Deep Learning model built with PyTorch that predicts fires and assigns a risk index to each zone, viewable in a virtual reality headset. A spatiotemporal model such as ConvLSTM was under consideration."
+        }
+      ],
+      tags: ["Deep Learning", "PyTorch", "Python", "Pandas", { es: "Datos geoespaciales", en: "Geospatial data" }],
       note: "NASSAT · 2022"
     },
     {
@@ -123,17 +141,13 @@ window.PORTFOLIO = {
       },
       description: [
         {
-          es: "Proyecto personal para estudiar el mercado de la vivienda. Con un conjunto de datos de Airbnb de la Comunidad de Madrid, clasifiqué el tipo de habitación de cada apartamento y predije su precio mediante regresión. El proyecto recorre todo el análisis y procesado de datos y compara el desempeño de distintos modelos: Naive Bayes, KNN, árboles de decisión y Support Vector Machines.",
-          en: "Personal project to study the housing market. Using an Airbnb dataset from the Community of Madrid, I classified the room type of each apartment and predicted its price through regression. The project covers the whole data analysis and processing workflow and compares the performance of several models: Naive Bayes, KNN, decision trees and Support Vector Machines."
+          es: "Proyecto personal para estudiar el mercado de la vivienda: clasificación del tipo de habitación y predicción del precio, comparando Naive Bayes, KNN, árboles de decisión y SVM.",
+          en: "Personal project to study the housing market: room type classification and price prediction, comparing Naive Bayes, KNN, decision trees and SVM."
         }
       ],
-      tags: ["Scikit-Learn", "Pandas", "Matplotlib", "SVM", "KNN", "Python"],
+      tags: ["Machine Learning", { es: "Clasificación", en: "Classification" }, { es: "Regresión", en: "Regression" }, "Scikit-Learn", "Python"],
       link: "https://github.com/rafaroman18/AIRBNB_ML"
     },
-  ],
-
-  // Secondary projects
-  otherProjects: [
     {
       image: "assets/img/leapvr.svg",
       title: {
@@ -146,24 +160,9 @@ window.PORTFOLIO = {
           en: "Virtual reality prototype for training activities, viewable with Oculus Rift and interactive without controllers thanks to Leap Motion. With Alexa, simulations could be started and objects from a collection of 3D models found online could even be added on the fly."
         }
       ],
-      tags: [{ es: "Realidad virtual", en: "Virtual reality" }, "Leap Motion", "Alexa"],
+      tags: [{ es: "Realidad virtual", en: "Virtual reality" }, "Unity", "C#", "Leap Motion", "Alexa"],
       link: "https://github.com/rafaroman18/LeapVR"
     },
-    {
-      image: "assets/img/bot.svg",
-      title: {
-        es: "TorrentRaspBot: bot de Telegram en una Raspberry",
-        en: "TorrentRaspBot: Telegram bot on a Raspberry Pi"
-      },
-      description: [
-        {
-          es: "Bot que descarga cualquier enlace o torrent (enlaces magnéticos o archivos .torrent) enviado por Telegram con un comando como /download, muestra el progreso de la descarga y sube los archivos a Google Drive. Nació para uso personal, pero varios usuarios mostraron interés.",
-          en: "Bot that downloads any link or torrent (magnet links or .torrent files) sent through Telegram with a command such as /download, shows the download progress and uploads the files to Google Drive. It started as a personal tool, but several users showed interest."
-        }
-      ],
-      tags: ["Python", "Telegram", "Raspberry Pi", "Google Drive"],
-      link: "https://github.com/rafaroman18/TorrentRaspBot"
-    }
   ],
 
   // Professional experience, most recent first
@@ -232,6 +231,30 @@ window.PORTFOLIO = {
     },
     { title: "UiPath RPA Associate", detail: "2021" },
     { title: "B2 First (FCE)", detail: "Cambridge" }
+  ],
+
+  // Name highlighted in bold inside author lists
+  authorName: "Rafael Román",
+
+  // Publications, most recent first
+  publications: [
+    {
+      title: {
+        es: "RITA: Metodología para evaluación de respuestas inteligentes aplicando taxonomías de alucinaciones",
+        en: "RITA: A methodology for evaluating intelligent responses using hallucination taxonomies"
+      },
+      authors: ["Laura Vigoya", "Celia Fernández Rosales", "Carmen Alba Jiménez", "Rafael Román", "Rubén Morillas"],
+      venue: {
+        es: "Actas de las X Jornadas Nacionales de Investigación en Ciberseguridad (JNIC), Universidad de Zaragoza, pp. 591–595, 2025",
+        en: "Proceedings of the X National Cybersecurity Research Conference (JNIC), University of Zaragoza, pp. 591–595, 2025"
+      },
+      description: {
+        es: "Trabajo de investigación original realizado en FIDESOL: una metodología para evaluar las respuestas de los LLMs mediante una taxonomía de alucinaciones (de hecho y de fidelidad), validada con GPT-4o-mini, Gemini y DeepSeek. GPT-4o-mini fue el más consistente, con menos de un 39 % de alucinaciones.",
+        en: "Original research carried out at FIDESOL: a methodology to evaluate LLM responses through a hallucination taxonomy (factuality and faithfulness), validated with GPT-4o-mini, Gemini and DeepSeek. GPT-4o-mini was the most consistent, with under 39 % hallucinations."
+      },
+      link: "https://zaguan.unizar.es/record/161724/files/BOOK-2025-377.pdf#page=613",
+      linkLabel: { es: "Ver artículo (PDF) →", en: "View paper (PDF) →" }
+    }
   ],
 
   // Skill groups
