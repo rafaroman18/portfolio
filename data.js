@@ -209,7 +209,7 @@ window.PORTFOLIO = {
   education: [
     {
       title: { es: "Máster en Ingeniería y Ciencia de Datos", en: "Master's in Data Engineering and Science" },
-      detail: "UNED (2022 – 2026)"
+      detail: "UNED (2022 – 2025)"
     },
     {
       title: {
