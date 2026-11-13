@@ -273,11 +273,11 @@ window.PORTFOLIO = {
     },
     {
       title: { es: "Cloud y herramientas", en: "Cloud and tools" },
-      tags: ["AWS", "GCP", "Azure", "Docker", "Git", "Agile"]
+      tags: ["AWS", "Azure", "Docker", "Git", "Agile", "C#"]
     },
     {
       title: { es: "Otros", en: "Other" },
-      tags: ["C#", "Java", { es: "Español nativo", en: "Native Spanish" }, { es: "Inglés B2", en: "English B2" }]
+      tags: [{ es: "Español nativo", en: "Native Spanish" }, { es: "Inglés B2", en: "English B2" }]
     }
   ]
 };
